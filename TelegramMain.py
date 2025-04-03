@@ -20,7 +20,7 @@ from apscheduler.triggers.cron import CronTrigger
 mp.dps = 61
 deerday_chance = 12
 
-load_dotenv
+load_dotenv()
 # Вставьте сюда ваш токен бота и ID канала
 BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
 CHANNEL_ID = os.getenv('TELEGRAM_CHANNEL_ID')
