@@ -24,7 +24,8 @@ load_dotenv()
 # Вставьте сюда ваш токен бота и ID канала
 BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
 CHANNEL_ID = os.getenv('TELEGRAM_CHANNEL_ID')
-ADMIN_ID = os.getenv('8152099368')
+
+ADMIN_ID = os.getenv('ADMIN_ID')
 
 # Настроим логирование для отладки
 logging.basicConfig(level=logging.INFO,
