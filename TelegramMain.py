@@ -99,7 +99,7 @@ async def main():
     scheduler = AsyncIOScheduler()
     
     # Добавляем задачу в расписание: каждую пятницу в 10:00
-    scheduler.add_job(post_photo, CronTrigger(day_of_week='Fri', hour=10, minute=00))
+    scheduler.add_job(post_photo, CronTrigger(day_of_week='Fri', hour=5, minute=00))
     # Запускаем планировщик
     scheduler.start()
     
