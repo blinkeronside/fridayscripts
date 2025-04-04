@@ -36,12 +36,6 @@ logger = logging.getLogger(__name__)
 bot = Bot(token=BOT_TOKEN)
 
 
-
-
-
-
-
-
 # Функция для отправки уведомлений об ошибках
 async def notify_admin(error_message):
     try:
@@ -100,7 +94,7 @@ async def main():
     scheduler = AsyncIOScheduler()
     
     # Добавляем задачу в расписание: каждую пятницу в 10:00
-    scheduler.add_job(post_photo, CronTrigger(day_of_week='Fri', hour=5, minute=00))
+    scheduler.add_job(post_photo, CronTrigger(day_of_week='Fri', hour=19, minute=10 ))
     # Запускаем планировщик
     scheduler.start()
     
@@ -112,8 +106,7 @@ async def main():
     except asyncio.CancelledError as e:
             error_trace = traceback.format_exc()
             error_message = f"Произошла ошибка: {str(e)}\n\nТрассировка:\n{error_trace}"
-            notify_admin(error_message)
-            pass
+            await notify_admin(error_message)
     finally:
             scheduler.shutdown()
 
