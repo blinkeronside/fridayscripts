@@ -87,4 +87,4 @@ server1 = Server(os.getenv('VK_TOKEN'), 216246042, "server1")
 
 # Запланировать пост на ближайшую пятницу
 
-server1.schedule_post_for_friday(" ", [f"457239023%2F7e9e639e2d0a98f606", f"457239146%2Fda0b72110b2bc850c3"], posts_amount=posts_amount)
+server1.schedule_post_for_friday(" ", [f"457239163%2Fda1ae0c50f27957333", f"457239146%2Fda0b72110b2bc850c3"], posts_amount=posts_amount)
