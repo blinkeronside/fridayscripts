@@ -76,7 +76,7 @@ async def post_photo():
         photo_path = 'deerday.jpg'
     else:
         print("Свинятница")
-        photo_path = 'image.jpg'
+        photo_path = 'newfriday.jpg'
 
     logger.info("Starting to post photo.")
     #await send_message("Бот запустился, проверил: Отправляю пост с фотографией.")
