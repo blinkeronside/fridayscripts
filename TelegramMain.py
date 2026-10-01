@@ -105,7 +105,7 @@ def validate_photos(base_dir=BASE_DIR):
 
 
 def friday_trigger(timezone):
-    return CronTrigger(day_of_week="fri", hour=19, minute=10, timezone=timezone)
+    return CronTrigger(day_of_week="fri", hour=10, minute=00, timezone=timezone)
 
 
 def select_photo(now):
