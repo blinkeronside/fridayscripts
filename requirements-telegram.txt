@@ -1,0 +1,7 @@
+# Direct dependencies, kept at the versions already used by req.txt.
+-c constraints-telegram.txt
+APScheduler==3.11.0
+python-telegram-bot==22.0
+python-dotenv==1.1.0
+mpmath==1.3.0
+tzdata==2025.2

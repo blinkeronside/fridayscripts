@@ -1,2 +1,6 @@
 venv
 *.env
+.venv-check/
+__pycache__/
+*.pyc
+fridayscripts-linux.tar.gz

@@ -1,0 +1,31 @@
+[Unit]
+Description=Friday Telegram photo publisher
+Wants=network-online.target
+After=network-online.target
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=fridayscripts
+Group=fridayscripts
+WorkingDirectory=/opt/fridayscripts
+EnvironmentFile=/etc/fridayscripts/telegram.env
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONDONTWRITEBYTECODE=1
+ExecStart=/opt/fridayscripts/venv/bin/python /opt/fridayscripts/TelegramMain.py --no-dotenv
+Restart=on-failure
+RestartSec=30
+TimeoutStopSec=120
+KillSignal=SIGTERM
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=fridayscripts
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target
